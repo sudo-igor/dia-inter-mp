@@ -1,0 +1,138 @@
+.container__titulo {
+    --a: -45deg; /* control the angle */
+    --t: .23em; /* thickness of the underline */ 
+    color: #F1D4AF;
+}
+  
+.container__titulo span {
+    --_s: calc(var(--t)*cos(var(--a)));
+    background:
+      linear-gradient(var(--a),#0000 var(--_s),currentColor 0 calc(100% - var(--_s)),#0000 0) 
+      bottom/var(--i,90%) var(--t) no-repeat;
+    padding: 0 .25em calc(var(--t) + .1em);
+    -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.container__titulo:hover span {
+    --i: 100%;
+}
+  
+
+
+.cabecalho {
+    background-color: #e8333b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+    list-style-type: none;
+}
+
+.container__titulo {
+    display: none;
+    color: var(--branco);
+}
+
+.container__texto {
+    display: none;
+}
+
+.opcoes {
+    display: flex;
+    list-style-type: none;
+}
+
+.opcoes__item {
+    padding: 0 1em;
+    text-transform: uppercase;
+}
+
+.opcoes__link {
+    text-decoration: none;
+    color: var(--preto);
+}
+
+.opcoes__link:hover {
+    color: var(--branco);
+}
+
+.opcoes__link__selecionado {
+    color: var(--branco);
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+    .container__titulo {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+        color: var(--branco);
+    }
+    
+    .opcoes {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .opcoes__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .container__imagem-transparente {
+        display: none;
+    }
+    
+    .opcoes__item {
+        padding: 2em 1em;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .container__texto {
+        display: block;
+    }
+
+    .container__link {
+        display: flex;
+        align-items: center;
+        color: var(--preto)
+    }
+
+    .cabecalho {
+        padding: 0.2em;
+    }
+    
+    .container__titulo {
+        margin-right: 1em;
+    }
+}

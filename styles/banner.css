@@ -1,0 +1,65 @@
+.banner {
+    background-image: url("../imagens/Ministerio-Publico-960x540.jpg");
+    color: var(--branco);
+    text-align: center;
+    padding: 2.5em 2em;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner__titulo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-size: 50px;
+    animation: fade 3s;
+}
+
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+}
+
+.banner__texto {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    margin: 1em 0;
+    margin-bottom: 50px;
+}
+
+.saiba_mais {
+    background-color: transparent;
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    border-radius: 24px;
+    padding: 1.3em;
+    margin: 2px;
+}
+
+.saiba_mais:hover {
+    background-color: white;
+    color: var(--azul);
+}
+
+
+@media screen and (min-width: 1024px) {
+    .banner__titulo {
+        font-size: 46px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .banner {
+        padding: 12em 0;
+    }
+
+    .banner__titulo {
+        font-size: 56px;
+    }
+}
